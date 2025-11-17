@@ -1,0 +1,17 @@
+name: Simulación Pruebas Automatizadas
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener código
+        uses: actions/checkout@v3
+      
+      - name: Ejecutar pruebas simuladas
+        run: |
+          echo "Ejecutando pruebas unitarias..."
+          echo "Todas las pruebas simuladas pasaron correctamente."
